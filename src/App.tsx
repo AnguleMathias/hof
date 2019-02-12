@@ -15,7 +15,7 @@ class App extends React.Component<{}, AppState>{
   public done = false;
   public state = {
     teamMates: [] as any,
-    time: 60,
+    time: 120,
     timeLeft: {
       "hours": 0,
       "minute": 0,
