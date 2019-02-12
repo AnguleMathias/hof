@@ -15,7 +15,7 @@ class App extends React.Component<{}, AppState>{
   public done = false;
   public state = {
     teamMates: [] as any,
-    time: 120,
+    time: 121,
     timeLeft: {
       "hours": 0,
       "minute": 0,
@@ -46,7 +46,7 @@ class App extends React.Component<{}, AppState>{
           isPaused: false,
           name: teamList[memberKey],
           selected: false,
-          time: 60,
+          time: 121,
         })),
       })
     })
@@ -182,12 +182,12 @@ class App extends React.Component<{}, AppState>{
   }
 
   private secondsToTime = (secs: any) => {
-    const hours = Math.floor(secs / (60 * 60));
+    const hours = Math.floor(secs / (121 * 121));
 
-    const minutesDivisor = secs % (60 * 60);
-    const minutes = Math.floor(minutesDivisor / 60);
+    const minutesDivisor = secs % (121 * 121);
+    const minutes = Math.floor(minutesDivisor / 121);
 
-    const secondsDivisor = minutesDivisor % 60;
+    const secondsDivisor = minutesDivisor % 121;
     const seconds = Math.ceil(secondsDivisor);
 
     const obj = {
@@ -214,7 +214,7 @@ class App extends React.Component<{}, AppState>{
     this.setState({
       teamMates: [...this.state.teamMates].map((teamMember: any) => (
         teamMember.name === this.member.name
-          ? { ...teamMember, isDone: true, selected: false, time: 60}
+          ? { ...teamMember, isDone: true, selected: false, time: 121}
           : { ...teamMember }
       ))
     })
